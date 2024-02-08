@@ -4,18 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo - valor por kilo</title>
+    <script src="https://kit.fontawesome.com/081ed94ab1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/estilos/reciclavel.css">
 </head>
 <body>
     <section>
         <h1>Ganho Total</h1>
+        <img src="assets/images/img_1200_1.png" alt="">
         <div id="inputs">
-            <label for="kilo">Quantos Kilos de Latinha?</label>
-            <input type="number" name="kilo" id="kilo">
-            <label for="preco">Quanto Estão Pagando</label>
-            <input type="number" name="preco" id="preco">
+            <div class="grupo">
+                <label for="kilo">Quantos Kilos de Latinha?</label>
+                <div class="caixa">
+                    <input type="number" name="kilo" id="kilo" step="0.01">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+            </div>
+            <div class="grupo">
+                <label for="preco">Quanto Estão Pagando?</label>
+                <div class="caixa">
+                    <input type="number" name="preco" id="preco" step="0.01">
+                    <i class="fa-solid fa-money-bill"></i>
+                </div>
+            </div>
         </div>
-        <input type="button" value="Calcular" onclick="latinhas()">
+        <div id="buttons"><input type="button" value="Calcular" onclick="latinhas()">
+        <input type="button" value="Apagar" onclick="javascript:window.location.reload()"></div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

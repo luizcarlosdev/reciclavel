@@ -9,10 +9,87 @@ section{
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 280px;
-    padding: 15px;
+    padding: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+section > h1{
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+section > img{
+    height: 210px;
+    display: block;
+    margin: 13px auto;
+}
+
+section > div#inputs label,input[type=number]{
+    display:block;
+    margin: 5px 0px;
+}
+
+section div#inputs input[type=number]{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+section div#inputs label{
+    font-style: oblique;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+input[type=number]:focus{
+    outline-color: rgb(0, 119, 255);
+}
+
+input[type=number]:focus ~ i{
+    display: none;
+}
+
+section div#inputs div.grupo{
+    margin: 27px 0px;
+}
+
+div.caixa{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+div.caixa i{
+    position: absolute;
+    margin-left: 15px;
+    color: grey;
+}
+
+section > div#buttons{
+    display: flex;
+    flex-direction: row;
+    margin: 14px 0px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+
+section > div#buttons input[type=button]{
+    background-color: rgb(0, 119, 255);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s ease-in;
 }
