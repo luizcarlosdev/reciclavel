@@ -4,7 +4,7 @@ function calcular(limpar) {
     const kilo = document.querySelector("#kilo");
     const preco = document.querySelector("#preco");
     const section = document.querySelector("section");
-    const res = document.createElement("div");
+    const res = document.querySelector("#res");
     section.appendChild(res);
     res.style.display = 'none'
     if (kilo.value.length == 0 || preco.value.length == 0) {
@@ -28,4 +28,5 @@ let limpar = () => {
     preco.value = '';
     btn2.style.display = 'none';
     btn1.style.display = 'block';
+    res.style.display = 'none'
 }
