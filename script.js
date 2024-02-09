@@ -17,7 +17,7 @@ function calcular(limpar) {
         res.style.display = 'block';
         res.style.textAlign = 'center';
         res.style.margin = '13px 0px';
-        res.style.fontSize = '1.1rem'
+        res.style.fontSize = '1.4rem'
         res.textContent = `Preço Total: R$${valor}`;
         limpar()
     }
