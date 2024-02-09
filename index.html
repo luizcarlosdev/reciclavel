@@ -9,28 +9,23 @@
 </head>
 <body>
     <section>
-        <h1>Ganho Total</h1>
-        <img src="assets/images/img_1200_1.png" alt="">
-        <div id="inputs">
-            <div class="grupo">
-                <label for="kilo">Quantos Kilos de Latinha?</label>
-                <div class="caixa">
-                    <input type="number" name="kilo" id="kilo" step="0.01">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                </div>
+        <h1>Preço por kilo</h1>
+        <img src="assets/images/pngtree-recycling-symbol-of-green-foliage-white-png-image_11090663.png" alt="">
+        <div id="input-group">
+            <div class="box">
+                <label for="kilo">Quantos Kilos?</label>
+                <input type="number" name="kilo" id="kilo">
             </div>
-            <div class="grupo">
-                <label for="preco">Quanto Estão Pagando?</label>
-                <div class="caixa">
-                    <input type="number" name="preco" id="preco" step="0.01">
-                    <i class="fa-solid fa-money-bill"></i>
-                </div>
+            <div class="box">
+                <label for="preco">Qual o preço pago atual?</label>
+                <input type="number" name="preco" id="preco">
+            </div>
+            <div class="button">
+                <input id="btn1" type="button" value="Calcular" onclick="calcular()">
+                <input id="btn2" type="button" value="Limpar" onclick="limpar()">
             </div>
         </div>
-        <div id="buttons"><input type="button" value="Calcular" onclick="latinhas()">
-        <input type="button" value="Apagar" onclick="javascript:window.location.reload()"></div>
     </section>
-
     <script src="script.js"></script>
 </body>
 </html>

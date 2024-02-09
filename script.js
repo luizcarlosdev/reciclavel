@@ -1,22 +1,31 @@
-function latinhas() {
-    const section = document.querySelector('section')
-    const kilo = document.querySelector('#kilo');
-    const din = document.querySelector('#preco');
-    if (kilo.value.length == 0 || din.value.length == 0) {
-        alert("Insira os dados nos campos corretamente.")
-        area.innerHTML = '';
-        kilo.value = '';
-        din.value = '';
+function calcular(limpar) {
+    const btn1 = document.querySelector("#btn1");
+    const btn2 = document.querySelector("#btn2");
+    const kilo = document.querySelector("#kilo");
+    const preco = document.querySelector("#preco");
+    const section = document.querySelector("section");
+    const res = document.createElement("div");
+    section.appendChild(res);
+    res.style.display = 'none'
+    if (kilo.value.length == 0 || preco.value.length == 0) {
+        alert("Insira os dados corretamente.")
+        kilo.focus();
     } else {
-        const peso = Number(kilo.value);
-        const preco = Number(din.value);
-        const area = document.createElement('div');
-        area.style.textAlign = 'center';
-        area.innerHTML = ' ';
-        section.appendChild(area);
-        area.innerHTML = `${peso + preco}`;
+        const valor = Number(kilo.value) * Number(preco.value);
+        btn1.style.display = 'none';
+        btn2.style.display = 'block';
+        res.style.display = 'block';
+        res.style.textAlign = 'center';
+        res.style.margin = '13px 0px';
+        res.style.fontSize = '1.1rem'
+        res.textContent = `Preço Total: R$${valor}`;
+        limpar()
     }
+}
 
+let limpar = () => {
     kilo.value = '';
-    din.value = '';
+    preco.value = '';
+    btn2.style.display = 'none';
+    btn1.style.display = 'block';
 }
