@@ -1,9 +1,39 @@
 @charset "UTF-8";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(to bottom,rgb(17, 132, 57),greenyellow);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: rgb(8, 73, 77);
+    color: #fff;
+}
+
+header nav{
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #span-tittle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+}
+
+header #span-menu{
+    font-size: 1.3rem;
 }
 
 section{
@@ -17,6 +47,8 @@ section{
     display: flex;
     flex-direction: column;
     width: 300px;
+    border-radius: 3px;
+    box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.467);
 }
 
 section h1,h2,h3,h4,h5,h6{
@@ -43,13 +75,14 @@ section div#input-group div.box label,input[type=number]{
 section div#input-group div.box label{
     font-weight: 500;
     font-style: oblique;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     margin: 15px 0px;
     display: inline-block;
     background-color: cadetblue;
     padding: 3px 5px;
     border-radius: 5px;
     cursor: pointer;
+    color: #fff;
 }
 
 section div#input-group div.box input[type=number],input[type=button]{
@@ -82,4 +115,10 @@ section div#input-group div.button input[type=button]:hover{
 
 section div#input-group div.button #btn2{
     display: none;
+}
+
+@media screen and (max-width:768px) {
+    header #span-tittle{
+        align-self: center;
+    }
 }
