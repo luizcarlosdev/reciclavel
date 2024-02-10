@@ -30,3 +30,14 @@ let limpar = () => {
     btn1.style.display = 'block';
     res.style.display = 'none'
 }
+
+function menuOpen(){
+    const menuHamburger = document.querySelector("aside#aside-menu");
+    menuHamburger.style.width = "250px";
+}
+
+function menuOut(){
+    const menuHamburger = document.querySelector("aside#aside-menu");
+    menuHamburger.style.width = "0px";
+}
+
