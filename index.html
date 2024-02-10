@@ -25,25 +25,27 @@
             <li><a href="#">menu</a></li>
         </ul>
     </aside>
-    <section>
-        <h1>Preço por kilo</h1>
-        <img src="assets/images/pngtree-recycling-symbol-of-green-foliage-white-png-image_11090663.png" alt="">
-        <div id="input-group">
-            <div class="box">
-                <label for="kilo">Quantos Kilos?</label>
-                <input type="number" name="kilo" id="kilo" step="0.01">
+    <div id="container">
+        <section>
+            <h1>Preço por kilo</h1>
+            <img src="assets/images/pngtree-recycling-symbol-of-green-foliage-white-png-image_11090663.png" alt="">
+            <div id="input-group">
+                <div class="box">
+                    <label for="kilo">Quantos Kilos?</label>
+                    <input type="number" name="kilo" id="kilo" step="0.01">
+                </div>
+                <div class="box">
+                    <label for="preco">Qual o preço pago atual?</label>
+                    <input type="number" name="preco" id="preco" step="0.01">
+                </div>
+                <div class="button">
+                    <input id="btn1" type="button" value="Calcular" onclick="calcular()">
+                    <input id="btn2" type="button" value="Limpar" onclick="limpar()">
+                </div>
+                <div id="res"></div>
             </div>
-            <div class="box">
-                <label for="preco">Qual o preço pago atual?</label>
-                <input type="number" name="preco" id="preco" step="0.01">
-            </div>
-            <div class="button">
-                <input id="btn1" type="button" value="Calcular" onclick="calcular()">
-                <input id="btn2" type="button" value="Limpar" onclick="limpar()">
-            </div>
-            <div id="res"></div>
-        </div>
-    </section>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
